@@ -1,0 +1,9 @@
+<div style="padding:0 20px">
+  <mat-form-field class="example-full-width">
+    <input matInput [formControl]="searchControl"  placeholder="pipe UserFilter" value="">
+  </mat-form-field>
+  <br>
+  <div *ngFor="let user of users | userFilter: searchStr; let $index = index">
+    <div>{{user.id}} - {{user.username}} - {{user.name}} - {{user.email}}- {{user.website}}</div>
+  </div>
+</div>

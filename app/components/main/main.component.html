@@ -1,0 +1,11 @@
+<div style="padding: 0 20px">
+  <mat-form-field class="example-full-width">
+    <input matInput [formControl]="accessControl"  placeholder="ifHasAccess" value="">
+  </mat-form-field>
+  <p mouseBold="green">Должно отразиться два параграфа</p>
+  <p mouseBold>* Если ввведена любая ИЗ букв - abcd</p>
+  <p mouseBold>* Если введены ВСЕ (и только) буквы - abcd ... можно с повтором букв</p>
+  <hr><br>
+  <div class="result" *ifHasAccess="permission; qu 'OR'">ifHasAccess с логикой ИЛИ</div>
+  <div class="result" *ifHasAccess="permission">ifHasAccess с логикой И </div>
+</div>
